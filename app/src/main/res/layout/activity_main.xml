@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Nombre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvApellido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="28dp"
+        android:text="Apellido"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombre" />
+
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Nombre"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/tvNombre"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etApellido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Apellido"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/tvApellido"
+        app:layout_constraintTop_toBottomOf="@+id/etNombre" />
+
+    <TextView
+        android:id="@+id/tvNombreIntroducidoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:text="Nombre introducido"
+        app:layout_constraintEnd_toStartOf="@+id/etApellido"
+        app:layout_constraintStart_toStartOf="@+id/etApellido"
+        app:layout_constraintTop_toBottomOf="@+id/etApellido" />
+
+    <TextView
+        android:id="@+id/tvApellidoIntroducidoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="12dp"
+        android:text="Apellidoo introducido"
+        app:layout_constraintStart_toStartOf="@+id/tvNombreIntroducidoLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombreIntroducidoLabel" />
+
+    <TextView
+        android:id="@+id/tvValorNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="12dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/etApellido"
+        app:layout_constraintTop_toBottomOf="@+id/etApellido" />
+
+    <TextView
+        android:id="@+id/tvValorApellido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/tvValorNombre"
+        app:layout_constraintTop_toBottomOf="@+id/tvValorNombre" />
+
+    <Button
+        android:id="@+id/btnCargarDatos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:onClick="cargar"
+        android:text="CARGAR DATOS"
+        app:layout_constraintStart_toStartOf="@+id/tvApellidoIntroducidoLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvApellidoIntroducidoLabel" />
+</androidx.constraintlayout.widget.ConstraintLayout>
